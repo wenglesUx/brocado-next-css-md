@@ -1,0 +1,61 @@
+.footer-section {
+  background-color: var(--color-accent-dark);
+  color: var(--color-text-light);
+}
+.main-footer {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.copyright, .credits {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.credits a {
+  text-decoration: underline;
+}
+.credits a:hover {
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* CSS for section section:footer (novo bloco) */
+.footer {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-footer);
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__copyright, .footer__credits {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.footer__credits a {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+

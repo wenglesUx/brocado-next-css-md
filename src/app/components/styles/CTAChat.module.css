@@ -1,0 +1,121 @@
+.cta-chat-section {
+  padding-top: 42px;
+  padding-bottom: 1px;
+}
+.cta-chat-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 42px;
+}
+.chat-bubbles-wrapper {
+  position: relative;
+  height: 430px;
+}
+.chat-bubble {
+  position: absolute;
+  padding: 32px;
+  border-radius: 4px;
+  width: 428px;
+  max-width: 100%;
+}
+.chat-bubble p {
+  font-family: var(--font-display);
+  font-size: 32px;
+  line-height: 0.95;
+  color: var(--color-text-light);
+}
+.chat-bubble::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.bubble-1 {
+  background-color: var(--color-text-dark);
+  top: 0;
+  left: 46px;
+}
+.bubble-1::after {
+  bottom: -28px;
+  right: 0;
+  border-width: 29px 34px 0 0;
+  border-color: var(--color-text-dark) transparent transparent transparent;
+}
+.bubble-2 {
+  background-color: var(--color-bg-orange);
+  top: 140px;
+  left: 0;
+}
+.bubble-2::after {
+  bottom: -23px;
+  left: 0;
+ border-top: 25px solid transparent;
+      border-bottom: 25px solid transparent;
+      border-right: 40px solid var(--color-bg-orange);
+  
+}
+.bubble-3 {
+  background-color: var(--color-accent-dark);
+  top: 281px;
+  left: 46px;
+}
+.bubble-3::after {
+  bottom: -28px;
+  right: 0;
+  border-width: 29px 34px 0 0;
+  border-color: var(--color-accent-dark) transparent transparent transparent;
+}
+.cta-image-wrapper {
+  justify-self: center;
+}
+@media (max-width: 992px) {
+  .cta-chat-container {
+    grid-template-columns: 1fr;
+  }
+  .chat-bubbles-wrapper {
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 450px;
+    
+  }
+  .chat-bubble {
+    position: relative;
+    width:90%;
+  }
+  .bubble-1 {
+    left:0 !important;
+  }
+  .bubble-2 {
+    top: 60px;
+    left: 0;
+  } 
+  .bubble-3 {
+    background-color: var(--color-accent-dark);
+    top:120px;
+    left:0 !important;
+  }
+  .chat-bubble::after {
+    display: flex;
+  }
+  .cta-image-wrapper {
+  height:500px;
+  display:flex;
+  justify-content:center;
+}
+}
+@media (max-width:425){
+      .chat-bubbles-wrapper {
+        height: 570px;
+    }
+}
+@media (max-width: 320px){
+    .chat-bubbles-wrapper {
+        height: 680px;
+    }
+  }
+
