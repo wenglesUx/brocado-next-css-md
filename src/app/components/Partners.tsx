@@ -50,7 +50,7 @@ export default function Partners() {
 
   return (
     <section id="section-partners" className={styles['partners-section']}>
-      <div className={`${styles.container} ${styles['partners-container']}`}>
+      <div className={`container ${styles['partners-container']}`}>
         <h3>Lojas parceiras</h3>
         <div className={styles['categories-wrapper']}>
           <p className={styles['categories-title']}>Os melhores restaurantes</p>

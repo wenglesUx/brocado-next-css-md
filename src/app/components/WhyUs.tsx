@@ -6,7 +6,7 @@ import styles from './styles/WhyUs.module.css';
 export default function WhyUs() {
   return (
     <section id="section-why-us" className={styles['why-us-section']}>
-      <div className={`${styles.container} ${styles['why-us-container']}`}>
+      <div className={`container ${styles['why-us-container']}`}>
         <h2>Por que escolher a <span className={styles.highlight}>Brocado</span>?</h2>
         <div className={styles['why-us-grid']}>
           <div className={styles['why-us-item']}>

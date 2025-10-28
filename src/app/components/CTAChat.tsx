@@ -5,7 +5,7 @@ import styles from './styles/CTAChat.module.css';
 export default function CTAChat() {
   return (
     <section id="section-cta-chat" className={styles['cta-chat-section']}>
-      <div className={`${styles.container} ${styles['cta-chat-container']}`}>
+      <div className={`container ${styles['cta-chat-container']}`}>
         <div className={`${styles['chat-bubbles-wrapper']} my-5`}>
           <div className={`${styles['chat-bubble']} ${styles['bubble-1']}`}>
             <p>Chega de explorar quem entrega</p>

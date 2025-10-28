@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <section id="section-header" className={styles['header-section']}>
       <header className={styles['main-header']}>
-        <div className={`${styles.container} ${styles['header-container']}`}>
+        <div className={`container ${styles['header-container']}`}>
           <Link href="/" className={styles.logo}>
             <div className={styles['logo-images']}>
               <Image

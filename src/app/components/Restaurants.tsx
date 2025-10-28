@@ -6,7 +6,7 @@ import styles from './styles/Restaurants.module.css';
 export default function Restaurants() {
   return (
     <section id="section-restaurants" className={styles['restaurants-section']}>
-      <div className={styles.container}>
+      <div className="container">
         <h2>Mais liberdade para quem vive da cozinha</h2>
         <div className={styles['features-grid']}>
           <div className={styles['feature-card']}>

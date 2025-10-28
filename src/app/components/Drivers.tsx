@@ -5,7 +5,7 @@ import styles from './styles/Drivers.module.css';
 export default function Drivers() {
   return (
     <section id="section-drivers" className={styles['drivers-section']}>
-      <div className={`${styles.container} ${styles['drivers-container']}`}>
+      <div className={`container ${styles['drivers-container']}`}>
         <div className={styles['drivers-intro']}>
           <h3>Aqui você tem voz, <span className={styles.highlight}>apoio</span> e <span className={styles.highlight}>oportunidade</span></h3>
           <p>Nada de exploração. Com a <strong>Brocado</strong>, o entregador tem estrutura, pontos de apoio nas cidades, recomendações de melhores rotas e prioridade real. Você trabalha com <strong>liberdade</strong> e ganha com <strong>dignidade</strong>. E ainda pode<strong> indicar restaurantes</strong> e<strong> crescer junto </strong>com a gente.</p>

@@ -6,7 +6,7 @@ import styles from './styles/Hero.module.css';
 export default function Hero() {
   return (
     <section id="section-hero" className={styles['hero-section']}>
-      <div className={styles.container}>
+         <div className="container">
         <div className={styles['hero-grid']}>
           <div className={styles['hero-content']}>
             <h1>O delivery que <span className={styles.highlight}>respeita</span> o seu negócio</h1>

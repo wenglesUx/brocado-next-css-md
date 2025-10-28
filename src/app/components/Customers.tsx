@@ -6,7 +6,7 @@ import styles from './styles/Customers.module.css';
 export default function Customers() {
   return (
     <section id="section-customers" className={styles['customers-section']}>
-      <div className={`${styles.container} ${styles['customers-container']}`}>
+      <div className={`container ${styles['customers-container']}`}>
         <div className={styles['customers-image-wrapper']}>
           <Image src="/images/689_209.svg" alt="Illustration of a chef holding a burger" className={styles['customers-illustration']} width={592} height={400} /> {/* Adjust width/height as needed */}
           <div className={styles['customers-app-modal']}>
