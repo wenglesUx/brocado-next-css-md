@@ -51,6 +51,7 @@ margin-top:1rem;
 }
 .footer__credits a {
   text-decoration: underline;
+  
 }
 @media (max-width: 768px) {
   .footer__container {
