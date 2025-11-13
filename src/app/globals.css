@@ -175,6 +175,8 @@ img {
   .container {
     padding-left: 60px;
     padding-right: 60px;
+      padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
   }
 }
 
@@ -308,7 +310,7 @@ img {
     color: rgba(0, 0, 0, 0);
     width: 1150px;
     max-width: 800px;
-    height: 850px;
+   height: 630px;
     margin-top: -7rem;
     margin-left: -19rem;
     padding: 6rem;
@@ -660,3 +662,13 @@ img {
   }
 }
 
+/* floating card */
+@media (max-width: 425px) {
+    .app-download-modal {
+     
+        margin-top: -7rem;
+      }
+    }
+
+/*  */
+/*  */

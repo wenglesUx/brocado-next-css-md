@@ -1,52 +1,68 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import styles from './styles/Partners.module.css';
 import Link from "next/link";
+import { useCarousel } from "../hooks/useCarousel";
+import styles from "./styles/Partners.module.css";
 
 export default function Partners() {
-  const sliderRef = useRef(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+  const {
+    sliderRef,
+    isDragging,
+    handleMouseDown,
+    handleMouseLeave,
+    handleMouseUp,
+    handleMouseMove,
+  } = useCarousel(200, 2500); // velocidade e intervalo
 
-  // ===== AUTOPLAY =====
-  useEffect(() => {
-    const slider = sliderRef.current;
-    if (!slider) return;
+// "use client";
+// import { useEffect, useRef, useState } from "react";
+// import Image from "next/image";
+// import styles from './styles/Partners.module.css';
+// import Link from "next/link";
 
-    const scrollStep = () => {
-      if (slider.scrollLeft + slider.offsetWidth >= slider.scrollWidth - 10) {
-        slider.scrollTo({ left: 0, behavior: "smooth" });
-      } else {
-        slider.scrollBy({ left: 200, behavior: "smooth" });
-      }
-    };
+// export default function Partners() {
+//   const sliderRef = useRef(null);
+//   const [isDragging, setIsDragging] = useState(false);
+//   const [startX, setStartX] = useState(0);
+//   const [scrollLeft, setScrollLeft] = useState(0);
 
-    const interval = setInterval(scrollStep, 2500); // muda a cada 2,5s
-    return () => clearInterval(interval);
-  }, []);
+  // // ===== AUTOPLAY =====
+  // useEffect(() => {
+  //   const slider = sliderRef.current;
+  //   if (!slider) return;
 
-  // ===== ARRASTAR COM MOUSE =====
-  const handleMouseDown = (e) => {
-    const slider = sliderRef.current;
-    if (!slider) return;
-    setIsDragging(true);
-    setStartX(e.pageX - slider.offsetLeft);
-    setScrollLeft(slider.scrollLeft);
-  };
+  //   const scrollStep = () => {
+  //     if (slider.scrollLeft + slider.offsetWidth >= slider.scrollWidth - 10) {
+  //       slider.scrollTo({ left: 0, behavior: "smooth" });
+  //     } else {
+  //       slider.scrollBy({ left: 200, behavior: "smooth" });
+  //     }
+  //   };
 
-  const handleMouseLeave = () => setIsDragging(false);
-  const handleMouseUp = () => setIsDragging(false);
+  //   const interval = setInterval(scrollStep, 2500); // muda a cada 2,5s
+  //   return () => clearInterval(interval);
+  // }, []);
 
-  const handleMouseMove = (e) => {
-    const slider = sliderRef.current;
-    if (!isDragging || !slider) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 1.2; // velocidade do arrasto
-    slider.scrollLeft = scrollLeft - walk;
-  };
+  // // ===== ARRASTAR COM MOUSE =====
+  // const handleMouseDown = (e) => {
+  //   const slider = sliderRef.current;
+  //   if (!slider) return;
+  //   setIsDragging(true);
+  //   setStartX(e.pageX - slider.offsetLeft);
+  //   setScrollLeft(slider.scrollLeft);
+  // };
+
+  // const handleMouseLeave = () => setIsDragging(false);
+  // const handleMouseUp = () => setIsDragging(false);
+
+  // const handleMouseMove = (e) => {
+  //   const slider = sliderRef.current;
+  //   if (!isDragging || !slider) return;
+  //   e.preventDefault();
+  //   const x = e.pageX - slider.offsetLeft;
+  //   const walk = (x - startX) * 1.2; // velocidade do arrasto
+  //   slider.scrollLeft = scrollLeft - walk;
+  // };
 
   return (
     <section id="section-partners" className={styles['partners-section']}>

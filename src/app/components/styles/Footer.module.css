@@ -1,6 +1,7 @@
 .footer-section {
   background-color: var(--color-accent-dark);
-  color: var(--color-text-light);
+  color: white !important;
+margin-top:1rem;
 }
 .main-footer {
   padding-top: 32px;
